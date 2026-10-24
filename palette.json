@@ -1,0 +1,23 @@
+{
+  "name": "ubgo",
+  "tile": [
+    "#0891B2",
+    "#155E75"
+  ],
+  "fg": "#FFFFFF",
+  "accent": "#FBBF24",
+  "darkTile": [
+    "#1E293B",
+    "#0F172A"
+  ],
+  "darkFg": "#F0F9FF",
+  "lightTile": [
+    "#ECFEFF",
+    "#CFFAFE"
+  ],
+  "lightFg": "#0E7490",
+  "lightAccent": "#D97706",
+  "ink": "#0B1220",
+  "primary": "#0891B2",
+  "primaryDark": "#22D3EE"
+}

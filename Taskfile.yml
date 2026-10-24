@@ -1,0 +1,34 @@
+version: '3'
+
+# ubgo brand pipeline. Run from this folder: task all
+
+tasks:
+  deps:
+    desc: Install the pinned generator dependencies (resvg, opentype.js, OFL fonts)
+    cmds:
+      - npm ci --no-audit --no-fund
+    status:
+      - test -d node_modules
+
+  gen:
+    desc: Regenerate every SVG mark, the 3 concept options and the tokens from brand.json
+    deps: [deps]
+    cmds:
+      - node gen-brand.mjs
+
+  raster:
+    desc: Make png/ (icons 16 to 512, apple-touch, lockups, social cards) and favicon.ico
+    deps: [deps]
+    cmds:
+      - node raster.mjs
+
+  all:
+    desc: Regenerate everything (SVG + tokens + PNG)
+    cmds:
+      - task: gen
+      - task: raster
+
+  clean:
+    desc: Remove generated raster output
+    cmds:
+      - rm -rf png favicon.ico

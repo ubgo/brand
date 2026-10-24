@@ -1,0 +1,16 @@
+{
+  "name": "ubgo-brand",
+  "private": true,
+  "type": "module",
+  "description": "Generator for the ubgo logo, icons, social card and tokens.",
+  "scripts": {
+    "gen": "node gen-brand.mjs",
+    "raster": "node raster.mjs"
+  },
+  "devDependencies": {
+    "@fontsource/jetbrains-mono": "5.2.5",
+    "@fontsource/space-grotesk": "5.2.5",
+    "@resvg/resvg-js": "2.6.2",
+    "opentype.js": "1.3.4"
+  }
+}
